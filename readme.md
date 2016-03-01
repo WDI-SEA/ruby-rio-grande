@@ -12,9 +12,9 @@ We are creating this using Test Driven Development. As a refresher, here is the 
 * Run test again (it should pass)
 * Refactor if necessary
 
-##Working in Pairs (optional)
+##Working in Pairs (recommended)
 
-If you'd like, you can pair up with another person and work on this collaboratively. If you decide to take this route:
+Due to the length and complexity of this assignment, it's recommended that you pair up with another person and work on this collaboratively. If you decide to take this route:
 
 * Have one person create the tests
 * Have the other person create the code to pass the tests
@@ -40,30 +40,14 @@ You can also test things manually in the console using `irb` or `pry` by using `
 **Usage Example (in terminal)**
 
 ```
-# ruby bootstrap.rb
+# pry bootstrap.rb
 
 # i = Item.new "item name",1.99
 
 # i.name
 output: item name
 
-# i.quantity
-output: 0
-
-# i.sell 2
-output: false
-
-# i.stock 2
-output: true
-
-# i.quantity
-output: 2
-
-# i.sell 2
-output: true
-
-# i.quantity
-output: 0
+...
 ```
 
 ##Part 1 - Create basic classes
