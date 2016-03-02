@@ -14,7 +14,7 @@ We are creating this using Test Driven Development. As a refresher, here is the 
 
 ##Working in Pairs (recommended)
 
-Due to the length and complexity of this assignment, it's recommended that you pair up with another person and work on this collaboratively. If you decide to take this route:
+Due to the TDD-nature of this assignment, it's recommended that you pair up with another person and work on this collaboratively. If you decide to take this route:
 
 * Have one person create the tests
 * Have the other person create the code to pass the tests
@@ -54,29 +54,11 @@ output: item name
 
 ###Item
 
-* Attributes
-  * Price
-  * Quantity (In Stock)
-  * Name
-  * Description
-* Initializer
-  * Items should initialize with:
-    * Name
-    * Price
-* Methods
-  * sell
-    * Takes one parameter for the quantity you want to sell.
-    * returns true/false on success/failure
-    * decrements quantity on success
-    * Called when a customer tries to buy a product
-  * stock
-    * Takes one parameter and increases quantity by that amount.
-    * Called when we receive a shipment of a product.
-
+Item has already been created for you, along with the tests for Item. Take a look at the file and inspect what the class does.
 
 ###Music, Movies, and Books
 
-There are many times of items and each has unique attributes. For starters lets create the following classes.
+Next, let's make the following classes that inherit from Item. Each class should have the following instance variables, as well as inherit from Item by calling the `super` method to pass the name and price.
 
 * Book < Item
   * Pages
@@ -91,12 +73,10 @@ There are many times of items and each has unique attributes. For starters lets 
   * Producer
 
 
-You should NOT add the new attributes to the Initializer.
-
 **Usage Example**
 
 ```ruby
-b = Book.new "Book Title", 12.99
+b = Book.new "Book Title", 12.99, 33, "Author Name"
 b.pages = 33
 b.author = "Author Name"
 ```
@@ -149,7 +129,7 @@ Items need to be able to compute their own shipping cost. To accomplish this we 
 * The `Item` class should have a `ship_price_per_oz` value.
   * All items have the same `ship_price_per_oz`.
   * It does not need to be get/set.
-  * Set the value to `1.2` ...because, that's why.
+  * Set the value of `ship_price_per_oz` to `1.2`
 * All items need a `ship_price` method that computes the shipping price for that item by multiplying the `ship_price_per_oz` and the `weight` of the individual item.
 * Items with no weight (digital items) should have weight set to -1 to specify there is no weight
 * The `ship_price` should return false for items with a weight of -1 (digital items).
@@ -164,99 +144,4 @@ book.ship_price
 
 song.ship_price
 #returns: false  (because it's digital)
-
-```
-
-###Initializer Refactor
-
-The inventory department needs you to refactor the code to include a 3rd parameter on the initializer, but we need to maintain backwards compatability for old code using 2 parameters.
-
-They want you to be able to call the `.new` method with a 3rd parameter for `weight`. If `weight` is ommitted it should default to 0 for backwards compatability.
-
-**Usage Example**
-
-```ruby
-#creates new book, sets weight to 2.2
-book1 = Book.new "name", 2.99, 2.2
-#creates new book, weight defaults to 0
-book2 = Book.new "name", 2.99
-```
-
-###Download Size
-
-The Digital Team needs all `DigitalItems` to include a property for download size. It should be able to be get/set.
-
-Additionally, they heard the inventory department got a 3rd initializer parameter so now they want want an *optional* 3rd initializer parameter for download size.
-
-**Usage Example**
-
-```ruby
-#creates a song, sets download size to 4
-song1 = Song.new "name", 2.99, 4
-#crates a song, download size defaults to 0
-song2 = Song.new "name", 2.99
-```
-
-The `weight` for digital items (in both examples above) should be -1 so calling `ship_price` on a digital item should still return false.
-
-##Part 3 - BONUS - Clothing
-
-If Rio Grande wants to keep up with the other river named online retailers they need to start carrying clothing. The problem is we need to be able to support multiple quantities for a single item (one quantity per size).
-
-###New objects
-* ClothingItem < Item
-* Shirt < ClotingItem
-* Pants < ClothingItem
-
-###Changes
-* Add array of sizes (should allow getting, but not setting)
-* Create hash to store quantities for each size
-* `stock`, `sell`, `return` methods
-    * should require 2 parameters (amount and size)
-    * should update the appopriate quantity in the hash
-* `stock` should add the size to the `sizes` array if it's not already there. It should not create duplicates
-* create a `quantity` method (replaces quantity getter)
-    * should have 1 optional parameter (size)
-    * if ommitted it should return the quantity for all sizes
-    * if supplied it should return the quantity for the specified size
-
-
-###Usage Example
-The below code should work as expected on your finished code
-
-```ruby
-#create a new shirt, for $19.99 that weighs 12 ounces
-shirt = Shirt.new "Bob Ross T-Shirt", 19.99, 12
-
-#returns: []  (there are no sizes defined)
-shirt.sizes
-
-#add quantities for large and small
-shirt.stock 5, "large"
-shirt.stock 3, "small"
-
-# returns: ["large","small"]
-shirt.sizes
-
-#returns: 8 (total quantity all sizes)
-shirt.quantity
-
-#returns: 3 (quantity of small)
-shirt.quantity "small"
-
-# sells 2 small shirts. reduces small shirt from 3 to 1. returns true
-shirt.sell 2, "small"
-
-#returns: 1 (quantity of small after sale)
-shirt.quantity "small"
-
-#returns: true. adds 1 to quantity of small
-shirt.return 1, "small"
-
-#adds 3 more small items (total quantity is 5)
-shirt.stock 3, "small"
-
-# returns: ["large","small"]  (no duplicate "small")
-shirt.sizes
-
 ```
