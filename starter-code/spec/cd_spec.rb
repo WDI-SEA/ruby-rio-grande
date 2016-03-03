@@ -20,6 +20,18 @@ describe Cd do
 	  	it "should be an item" do
 	  		expect(@cd).to be_kind_of(Item)
 	  	end
+
+      it "should assign cd name" do
+        expect(@cd.name).to eq("GA WDI Soundtrack")
+      end
+
+      it "should assign number of tracks" do
+        expect(@cd.tracks).to eq(12)
+      end
+
+      it "should assign an artist" do
+        expect(@cd.artist).to eq("KLO")
+      end
   end
 
   #check getters and setters
