@@ -61,7 +61,7 @@ describe DigitalItem do
       expect(@di.oz).to eq(-1)
     end
 
-    it "should be able to set price per oz" do
+    it "should not be able to set price per oz" do
       result = @item.ship_price 1
       expect(result).to eq(false)
       expect(@di.ship_price).to eq(0)
