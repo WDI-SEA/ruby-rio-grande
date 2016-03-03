@@ -54,6 +54,10 @@ describe Item do
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
     end
+    it "should have a ship price" do
+    	@item.weight = 10
+    	expect(@item.ship_price).to eq(12)
+    end
   end
 
 end
