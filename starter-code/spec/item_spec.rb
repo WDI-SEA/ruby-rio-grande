@@ -36,6 +36,11 @@ describe Item do
       @item.description="test"
       expect(@item.description).to eq("test")
     end
+    it "should be able to set and get weight" do
+      expect(@item.weight).to eq(0)
+      @item.weight = 1
+      expect(@item.weight).to eq(1)
+    end
   end
 
   describe "Methods" do
@@ -53,6 +58,15 @@ describe Item do
       result = @item.sell 3
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
+    end
+    it "should be able to return items and increase quantity" do
+      result = @item.return 1
+      expect(result).to eq(true)
+      expect(@item.quantity).to eq(3)
+    end
+    it 'should return ship price' do
+      result = @item.ship_price
+      expect(result).to eq(1.2)
     end
   end
 
