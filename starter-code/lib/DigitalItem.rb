@@ -6,6 +6,7 @@ class Digital < Item
   def initialize (name, price)
     super(name, price)
     @quantity = 1
+    @weight = -1
   end
 
   def sell amount
@@ -14,5 +15,14 @@ class Digital < Item
 
   def stock amount
     @quantity = 1
+  end
+
+  def return amount
+    @quantity = 1
+  end
+
+  def ship_price
+    @weight = -1
+    false
   end
 end

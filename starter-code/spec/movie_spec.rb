@@ -37,7 +37,7 @@ describe Movie do
     end
   end
 
-  describe 'selling and stocking' do
+  describe 'ship_price, selling, returning, and stocking' do
 
     it 'should remain quantity 1 after sell' do
       @movie.sell(20)
@@ -47,6 +47,16 @@ describe Movie do
     it 'should remain quantity 1 after stock' do
       @movie.stock(10)
       expect(@movie.quantity).to eq(1)
+    end
+
+    it 'should not add returned amount to quantity' do
+      @movie.return(2)
+      expect(@movie.quantity).to eq(1)
+    end
+
+    it 'should return ship price' do
+      @movie.ship_price
+      expect(@movie.ship_price).to eq(false)
     end
   end
 

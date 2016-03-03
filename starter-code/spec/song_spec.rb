@@ -32,7 +32,7 @@ describe Song do
     end
   end
 
-  describe 'selling and stocking' do
+  describe 'ship_price, selling, returning, and stocking' do
 
     it 'should remain quantity 1 after sell' do
       @song.sell(20)
@@ -42,6 +42,16 @@ describe Song do
     it 'should remain quantity 1 after stock' do
       @song.stock(10)
       expect(@song.quantity).to eq(1)
+    end
+
+    it 'should not add returned amount to quantity' do
+      @song.return(2)
+      expect(@song.quantity).to eq(1)
+    end
+
+    it 'should return ship price' do
+      @song.ship_price
+      expect(@song.ship_price).to eq(false)
     end
   end
 

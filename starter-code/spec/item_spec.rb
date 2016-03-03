@@ -17,6 +17,9 @@ describe Item do
     it "is assigned a price" do
       expect(@item.price).to eq(1.99)
     end
+    it "is assigned a weight" do
+      expect(@item.weight).to eq(0)
+    end
   end
 
   describe "Accessors" do
@@ -54,6 +57,15 @@ describe Item do
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
     end
+    it 'should add returned amount to quantity' do
+      result = @item.return 1
+      expect(result).to eq(true)
+      expect(@item.quantity).to eq(3)
+    end
+    it 'should return ship price' do
+      @item.weight = 2
+      @item.ship_price
+      expect(@item.ship_price).to eq(2.4)
+    end
   end
-
 end

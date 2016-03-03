@@ -33,7 +33,7 @@ describe EBook do
     end
   end
 
-  describe 'selling and stocking' do
+  describe 'ship_price, selling, returning, and stocking' do
 
     it 'should remain quantity 1 after sell' do
       @ebook.sell(20)
@@ -43,6 +43,16 @@ describe EBook do
     it 'should remain quantity 1 after stock' do
       @ebook.stock(10)
       expect(@ebook.quantity).to eq(1)
+    end
+
+    it 'should not add returned amount to quantity' do
+      @ebook.return(2)
+      expect(@ebook.quantity).to eq(1)
+    end
+
+    it 'should return ship price' do
+      @ebook.ship_price
+      expect(@ebook.ship_price).to eq(false)
     end
   end
 

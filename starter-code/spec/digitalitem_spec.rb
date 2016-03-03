@@ -27,7 +27,7 @@ describe Digital do
     end
   end
 
-  describe 'selling and stocking' do
+  describe 'ship_price, selling, returning, and stocking' do
 
     it 'should remain quantity 1 after sell' do
       @item.sell(20)
@@ -37,6 +37,16 @@ describe Digital do
     it 'should remain quantity 1 after stock' do
       @item.stock(10)
       expect(@item.quantity).to eq(1)
+    end
+
+    it 'should not add returned amount to quantity' do
+      @item.return(2)
+      expect(@item.quantity).to eq(1)
+    end
+
+    it 'should return ship price' do
+      @item.ship_price
+      expect(@item.ship_price).to eq(false)
     end
   end
 
