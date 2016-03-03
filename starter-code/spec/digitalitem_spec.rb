@@ -57,5 +57,12 @@ describe DigitalItem do
       expect(result).to eq(true)
       expect(@digitalitem.quantity).to eq(1)
     end
+    it "should be able to return items" do
+      result = @digitalitem.return 1
+      expect(@digitalitem.quantity).to eq(1)
+    end
+    it "should be no shipping price on digital items" do
+      expect(@digitalitem.ship_price).to eq(false)
+    end
   end
 end

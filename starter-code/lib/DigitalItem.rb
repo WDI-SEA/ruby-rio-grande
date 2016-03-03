@@ -5,6 +5,7 @@ class DigitalItem < Item
   def initialize(name, price)
     super(name, price)
     @quantity = 1
+    @weight = -1
   end
 
   def sell(amount)
@@ -15,4 +16,7 @@ class DigitalItem < Item
     true
   end
 
+  def return(amount)
+    @quntity = 1
+  end
 end
