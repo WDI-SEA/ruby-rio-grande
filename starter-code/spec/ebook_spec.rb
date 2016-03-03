@@ -35,6 +35,14 @@ describe EBook do
 			@ebook.sell 1
 			expect(@ebook.quantity).to eq(1)
 		end
+		it "should be able to return items" do
+      	@ebook.return(2)
+      	expect(@ebook.quantity).to eq(3)
+    	end
+    	it "should return ship price" do
+      		@ebook.ship_price
+      		expect(@ebook.ship_price).to eq(false)
+    	end
 	end 
 end
 	

@@ -16,4 +16,8 @@ class DigitalItem < Item
 	def stock amount
 		@quantity = 1
 	end
+
+	def return amount
+    @quantity += amount
+  	end
 end

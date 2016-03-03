@@ -60,5 +60,13 @@ describe Movie do
 			@movie.sell 1
 			expect(@movie.quantity).to eq(1)
 		end
+		it "should be able to return items" do
+      		@movie.return(2)
+      		expect(@movie.quantity).to eq(3)
+    	end
+    	it "should return ship price" do
+      		@movie.ship_price
+      		expect(@movie.ship_price).to eq(false)
+    	end
 	end 
 end

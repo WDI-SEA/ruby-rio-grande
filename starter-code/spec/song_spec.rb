@@ -53,5 +53,13 @@ describe Song do
 			@song.sell 1
 			expect(@song.quantity).to eq(1)
 		end
+		it "should be able to return items" do
+      		@song.return(2)
+      		expect(@song.quantity).to eq(3)
+    	end
+    	it "should return ship price" do
+      		@song.ship_price
+      		expect(@song.ship_price).to eq(false)
+    	end
 	end 
 end
