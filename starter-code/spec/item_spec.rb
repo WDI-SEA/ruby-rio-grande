@@ -4,7 +4,7 @@ require_relative '../lib/Item'
 describe Item do
 
   before(:context) do
-    @item = Item.new("Generic Item",1.99)
+    @item = Item.new("Generic Item", 1.99, 40)
   end
 
   describe "Initialization" do
@@ -54,6 +54,12 @@ describe Item do
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
     end
+
+    it "should calculate shipping price" do
+      result = @item.ship_price
+      expect(result).to eq(48)
+    end
+
   end
 
 end
