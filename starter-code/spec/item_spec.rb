@@ -54,6 +54,15 @@ describe Item do
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
     end
+    it "should be able to return items and update quantity" do
+      result = @item.return 1
+      expect(@item.quantity).to eq(3)
+    end
+    it "should be able to calculate ship_price " do
+      @item.weight = 2
+      expect(@item.ship_price).to eq(2.4)
+    end
+
   end
 
 end
