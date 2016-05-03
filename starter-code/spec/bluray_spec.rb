@@ -5,28 +5,27 @@ describe Bluray do
 
   before(:context) do
     #initialize item
-     @bluray = Bluray.new("Generic Title", 40, "Generic Runtime", "Generic Director", "Generic Producer")
+     @bluray = Bluray.new("Generic Bluray", 40, 140, "Generic Director", "Generic Producer")
   end
 
   #check initialization
   describe "Initialization" do
-
-  #check that it is an extended from Item
-  	it "is an extended item from Item" do
-  		expect(@bluray).to be_instance_of(Item)
+  	#check that it is an extended from Item
+  	it "is an extended class from Item" do 
+  		expect(Bluray).to be < Item
   	end
   #check that it is an instance of Bluray
     it "is an instance of the Bluray class" do
       expect(@bluray).to be_instance_of(Bluray)
     end
     it "is assigned a name" do
-      expect(@bluray.name).to eq("Generic Title")
+      expect(@bluray.name).to eq("Generic Bluray")
     end
     it "is assigned a price" do
       expect(@bluray.price).to eq(40)
     end
     it "is assigned a runtime" do
-      expect(@bluray.runtime).to eq("Generic Runtime")
+      expect(@bluray.runtime).to eq(140)
     end
     it "is assigned a director" do
       expect(@bluray.director).to eq("Generic Director")
@@ -40,8 +39,8 @@ describe Bluray do
 
 		#check getters and setters
 		it "should be able to get and set runtime" do
-	     	@bluray.runtime="New Runtime"
-	      expect(@bluray.runtime).to eq("New Runtime")
+	     	@bluray.runtime=120
+	      expect(@bluray.runtime).to eq(120)
 	    end
 
 	   it "should be able to get and set director" do
@@ -54,4 +53,11 @@ describe Bluray do
 	      expect(@bluray.producer).to eq("New Producer")
 	    end
 	end
+
+	describe "Methods" do
+    it "should be able to change language" do
+      @bluray.change_language
+      expect(@bluray.language).to eq("Korean")
+    end
+  end
 end
