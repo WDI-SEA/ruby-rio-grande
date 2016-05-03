@@ -20,10 +20,10 @@ describe Book do
       expect(@book1.name).to eq("Goodnight Moon")
     end
     it "is assigned a price" do
-      expect(@book1.price).to eq(1.99)
+      expect(@book1.price).to eq(6)
     end
     it "is assigned a number of pages" do
-    	expect(@book1.pages).to eq(6)
+    	expect(@book1.pages).to eq(30)
     end
     it "is assigned an author" do
     	expect(@book1.author).to eq("Margaret Wise Brown")
