@@ -1,7 +1,7 @@
 require_relative 'Item.rb'
 class Book < Item
 
-  def initialize name, price
+  def initialize name, price, pages, author
     super(name,price)
   end
 end
