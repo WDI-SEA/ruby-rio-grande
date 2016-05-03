@@ -17,7 +17,7 @@ describe Book do
     end
 
     it "is assigned a name" do
-      expect(@book1.name).to eq("Generic Item")
+      expect(@book1.name).to eq("Goodnight Moon")
     end
     it "is assigned a price" do
       expect(@book1.price).to eq(1.99)
