@@ -20,11 +20,16 @@ describe Book do
     it "is assigned a price" do
       expect(@book.price).to eq(50)
     end
-
   		#check that it is an instance of Book
   		it "is an instance of Book" do
   			expect(@book).to be_instance_of(Book)
   		end
+  		it "is assigned a number of pages" do
+    	expect(@book.pages).to eq(777)
+    end
+    it "is assigned an author" do
+    	expect(@book.author).to eq("Generic Author")
+    end
 	end
 
 	describe "Accessors" do
@@ -41,7 +46,7 @@ describe Book do
 	end
 
 	describe "Methods" do
-    it "should be able to shorten the book" do
+    it "should be able to tear out pages from the book" do
       @book.tear_out_pages 50
       expect(@book.pages).to eq(727)
     end
