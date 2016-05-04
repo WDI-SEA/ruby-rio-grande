@@ -12,16 +12,16 @@ describe Book do
     it "Book to be inherited from Item" do
       expect(Book).to be < Item 
     end
-     it "is assigned a name" do
+     it "is assigned a title" do
       expect(@book.name).to eq("Into the Wild")
     end
     it "is assigned a price" do
       expect(@book.price).to eq(11.21)
     end
-    it "is assigned a runtime" do
+    it "is assigned a number of pages" do
       expect(@book.pages).to eq(240)
     end
-    it "is assigned a director" do
+    it "is assigned an author" do
       expect(@book.author).to eq("Jon Krakauer")
     end
   end
