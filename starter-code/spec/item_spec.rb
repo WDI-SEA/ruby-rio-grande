@@ -36,6 +36,13 @@ describe Item do
       @item.description="test"
       expect(@item.description).to eq("test")
     end
+    it "should have weight attribute and get and set" do
+      @item.weight = 32
+      expect(@item.weight).to eq(32)
+    end
+    it "should have ship_price_per_oz but no get/set" do
+      expect(@item.ship_price_per_oz).to eq(1.2)
+    end
   end
 
   describe "Methods" do
@@ -58,6 +65,10 @@ describe Item do
       result = @item.return 3
       expect(result).to eq(true)
       expect(@item.quantity).to eq(5)
+    end
+    it "should be able to calculate ship_price based on weight" do
+      price = @item.ship_price
+      expect(price).to eq(1.2 * 32)
     end
   end
 

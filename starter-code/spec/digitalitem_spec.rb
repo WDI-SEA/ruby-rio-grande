@@ -30,6 +30,9 @@ describe DigitalItem do
       @digital_item.price = 10.99
       expect(@digital_item.price).to eq(10.99)
     end
+    it "should have weight attribute set to -1 to show there is no weight" do
+      expect(@digital_item.weight).to eq(-1)
+    end
   end
 
   describe "Methods" do
@@ -52,6 +55,10 @@ describe DigitalItem do
       result = @digital_item.return(10)
       expect(result).to eq(true)
       expect(@digital_item.quantity).to eq(1)
+    end
+    it "should calculate ship_price as false" do
+      price = @item.ship_price
+      expect(price).to eq(false)
     end
   end
 
