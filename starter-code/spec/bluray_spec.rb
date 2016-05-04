@@ -31,7 +31,7 @@ describe Bluray do
       expect(@br1.name).to eq("New Name")
     end
     it "should be able to get and set price" do
-      @item.price=44.99
+      @br1.price=44.99
       expect(@br1.price).to eq(44.99)
     end
     it "should be able to get and set description" do
