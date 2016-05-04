@@ -5,8 +5,10 @@ describe Book do
 
   before(:context) do
     #initialize item
-    def initialize
+    @book = Book.new("Where the Wild Things Are", 5.00)
   end
+
+  
 
   #check initialization
   #check that it is an extended from Item

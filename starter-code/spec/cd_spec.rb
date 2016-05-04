@@ -5,7 +5,10 @@ describe Cd do
 
   before(:context) do
     #initialize item
+    @cd = Cd.new("Parade of the Athletes", 14.99)
   end
+
+  
 
   #check initialization
   #check that it is an extended from Item
