@@ -4,12 +4,21 @@ require_relative '../lib/Cd'
 describe Cd do
 
   before(:context) do
-    #initialize item
+    @cd = Cd.new(12,"Animals as Leaders", "12 hours")
   end
 
-  #check initialization
-  #check that it is an extended from Item
-  #check that it is an instance of Cd
-  #check getters and setters
-
+  describe "Initialization" do
+    it "is an instance of the Cd class" do
+      expect(@cd).to be_instance_of(Cd)
+    end
+    it "is assigned a name" do
+      expect(@cd.tracks).to eq(12)
+    end
+    it "is assigned a price" do
+      expect(@cd.artist).to eq("Animals as Leaders")
+    end
+    it "is assigned a price" do
+      expect(@cd.runtime).to eq("12 hours")
+    end
+  end
 end

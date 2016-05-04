@@ -1,6 +1,6 @@
 require_relative 'Item.rb'
 class Cd < Item
-  attr_accessor :tracks :artist :runtime
+  attr_accessor :tracks, :artist, :runtime
 
   def initialize tracks, artist, runtime
     super("Cd")
