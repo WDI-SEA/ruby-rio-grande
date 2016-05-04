@@ -49,10 +49,23 @@ describe Item do
       expect(result).to eq(false)
       expect(@item.quantity).to eq(5)
     end
+    it "should be able to get quantity" do
+      expect(@item.quantity).to eq(5)
+    end
     it "should be able to sell items and update quantity" do
       result = @item.sell 3
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
+    end
+    it "should be able to return items and update quantity" do
+      result = @item.return 5
+      expect(result).to eq(true)
+      expect(@item.quantity).to eq(7)
+    end
+    it "should be able to get and set weight" do
+      expect(@item.weight).to eq(0)
+      @item.weight = 2
+      expect(@item.weight).to eq(2)
     end
   end
 
