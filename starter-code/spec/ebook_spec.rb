@@ -26,8 +26,8 @@ describe EBook do
    	it "is assigned a price" do
       	expect(@ebook.price).to eq(20)
   		end
-  		it "is assigned a number of file size (GB)" do
-      	expect(@digitalitem.filesize).to eq(1.2)
+  		it "is assigned a file size (GB)" do
+      	expect(@ebook.filesize).to eq(1.2)
    	end
   		#check that it is an instance of EBook
   		it "is an instance of EBook" do

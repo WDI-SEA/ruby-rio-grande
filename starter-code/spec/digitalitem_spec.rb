@@ -26,7 +26,7 @@ describe DigitalItem do
   		it "is an instance of DigitalItem" do
   			expect(@digitalitem).to be_instance_of(DigitalItem)
   		end
-  		it "is assigned a number of file size (GB)" do
+  		it "is assigned a file size (GB)" do
       expect(@digitalitem.filesize).to eq(1.5)
     end
 	end
