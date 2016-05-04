@@ -67,9 +67,21 @@ describe Book do
     end
   end
 
-  #check initialization
-  #check that it is an extended from Item
-  #check that it is an instance of Book
-  #check getters and setters
-
+  describe "Part 2 Methods" do
+    it "should be able to return" do
+      result = @book1.return 2
+      expect(result).to eq(true)
+      expect(@book1.quantity).to eq(4)
+    end
+    it "should have a default weight of 0" do
+      expect(@book1.weight).to eq(0)
+    end
+    it "should be able to set a new weight" do
+      @book1.weight = 1
+      expect(@book1.weight).to eq(1)
+    end
+    it "should be able to report a ship_price" do
+      expect(@book1.ship_price).to eq(1.2)
+    end
+  end
 end

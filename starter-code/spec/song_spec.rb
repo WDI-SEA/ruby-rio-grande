@@ -61,6 +61,23 @@ describe Song do
       expect(@song1.quantity).to eq(2)
     end
   end
-
+  
+  describe "Part 2 Methods" do
+    it "should be able to return, digital items wont change the quantity" do
+      result = @song1.return 2
+      expect(result).to eq(true)
+      expect(@song1.quantity).to eq(1)
+    end
+    it "should have a default weight of -1 for digital items" do
+      expect(@song1.weight).to eq(0)
+    end
+    it "should not be able to set a new weight" do
+      @song1.weight = 1
+      expect(@song1.weight).to eq(-1)
+    end
+    it "should not be to report a ship_price" do
+      expect(@song1.ship_price).to eq(false)
+    end
+  end
 end
 # You are on your own... good luck.

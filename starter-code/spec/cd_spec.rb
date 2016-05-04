@@ -68,4 +68,21 @@ describe Cd do
     end
   end
 
+  describe "Part 2 Methods" do
+    it "should be able to return" do
+      result = @cd1.return 2
+      expect(result).to eq(true)
+      expect(@cd1.quantity).to eq(4)
+    end
+    it "should have a default weight of 0" do
+      expect(@cd1.weight).to eq(0)
+    end
+    it "should be able to set a new weight" do
+      @cd1.weight = 1
+      expect(@cd1.weight).to eq(1)
+    end
+    it "should be able to report a ship_price" do
+      expect(@cd1.ship_price).to eq(1.2)
+    end
+  end
 end

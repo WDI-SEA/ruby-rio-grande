@@ -71,4 +71,21 @@ describe Movie do
     end
   end
 
+  describe "Part 2 Methods" do
+    it "should be able to return, digital items wont change the quantity" do
+      result = @movie1.return 2
+      expect(result).to eq(true)
+      expect(@movie1.quantity).to eq(1)
+    end
+    it "should have a default weight of -1 for digital items" do
+      expect(@movie1.weight).to eq(0)
+    end
+    it "should not be able to set a new weight" do
+      @movie1.weight = 1
+      expect(@movie1.weight).to eq(-1)
+    end
+    it "should not be to report a ship_price" do
+      expect(@movie1.ship_price).to eq(false)
+    end
+  end
 end
