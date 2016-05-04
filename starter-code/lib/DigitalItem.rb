@@ -20,4 +20,9 @@ class Digitalitem < Item
     puts "Item is available"
     @quantity = 1
   end
+
+  def return
+    @quantity = 1
+    "Digital copy has been returned"
+  end
 end
