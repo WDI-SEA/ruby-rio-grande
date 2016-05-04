@@ -27,19 +27,26 @@ describe DigitalItem do
     end
   end
   #check getters and setters
-  describe 'Methods' do
-    it "should not be able to set quantity" do
-      @item.stock 75
-      expect(@item.quantity).to eq(1)
-    end  
+  describe "Quantiy and weight" do
+    it "defaults to a quantity of 1" do
+      expect(@di.quantity).to eq(1)
+    end
+    it "defaults to a weight of -1" do
+      expect(@di.weight).to eq(-1)
+    end
   end
+
   
   describe 'Methods' do
     it "should not be able to set quantity" do
       @item.sell 75
       expect(@item.quantity).to eq(1)
-    end  
+    end 
+    it "should not be able to change quantity" do
+    @item.return 1
+    expect(@item.quantity).to eq(1) 
   end
+end
 
 end
 

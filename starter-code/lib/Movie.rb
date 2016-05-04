@@ -12,6 +12,8 @@ attr_accessor :runtime, :director, :producer
 
     super(name,price)
   end
+
+
  end
 
 
