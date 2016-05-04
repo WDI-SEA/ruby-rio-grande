@@ -1,5 +1,5 @@
 class Item
-  attr_reader :quantity
+  attr_reader :quantity, :ship_price_per_oz
   attr_accessor :name, :price, :description, :weight
 
   def initialize name, price
@@ -8,6 +8,7 @@ class Item
     @quantity = 0
     @description = ""
     @weight = 0
+    @ship_price_per_oz = 1.2
 
   end
 
@@ -27,6 +28,10 @@ class Item
 
   def return
     item.return 1
+  end
+
+  def ship_price
+    @ship_price_per_oz * @weight
   end
 
 end

@@ -9,7 +9,7 @@ class Digitalitem < Item
     super(name,price)
     @quantity = 1
     @description = description
-    @weight = 0
+    @weight = -1
 
   end
 
