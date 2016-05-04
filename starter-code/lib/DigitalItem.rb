@@ -3,13 +3,12 @@ require_relative 'Item.rb'
 
 class DigitalItem < Item
 	attr_accessor :filesize
-	attr_accessor :weight
 
-	def initialize name, price, filesize
+def initialize name, price, filesize
     super(name,price, weight)
     @filesize = filesize
     @quantity = 1
-    @weight = -1
+    # @weight = -1
     @ship_price = nil
 	end
 
@@ -20,5 +19,8 @@ class DigitalItem < Item
   end
   def ship_price
   	@ship_price
+  end
+  def weight
+    -1
   end
 end

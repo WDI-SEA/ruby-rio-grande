@@ -40,6 +40,11 @@ describe DigitalItem do
 	     	@digitalitem.filesize=2
 	      expect(@digitalitem.filesize).to eq(2)
 	    end
+          it "should not be able to set weight" do
+            @digitalitem.weight=2
+            expect(@digitalitem.weight).to eq(-1)
+          end
+
 	end
 
 	describe "Methods" do
