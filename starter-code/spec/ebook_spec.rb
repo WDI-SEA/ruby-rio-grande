@@ -48,11 +48,4 @@ describe EBook do
 	      expect(@ebook.author).to eq("New Author")
 	    end
 	end
-
-	describe "Methods" do
-     it "should not be able to tear out pages from the ebook" do
-     		@ebook.tear_out_pages 50
-     		expect(@book.pages).to eq(777)
-   	end
-  end
 end

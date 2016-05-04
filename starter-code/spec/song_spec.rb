@@ -53,11 +53,4 @@ describe Song do
 	      expect(@song.artist).to eq("New Artist")
 	    end
 	end
-
-	describe "Methods" do
-    it "should be able to get a discount" do
-      @song.discount 1
-      expect(@song.price).to eq(1)
-    end
-  end
 end

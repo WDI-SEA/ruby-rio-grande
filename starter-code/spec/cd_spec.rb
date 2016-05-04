@@ -48,11 +48,4 @@ describe Cd do
 	      expect(@cd.artist).to eq("New Artist")
 	    end
 	end
-
-	describe "Methods" do
-    it "should be able to shorten the runtime" do
-      @cd.cut_runtime 10
-      expect(@cd.runtime).to eq(30)
-    end
-  end
 end

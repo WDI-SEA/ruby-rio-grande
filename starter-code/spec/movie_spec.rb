@@ -61,11 +61,4 @@ describe Movie do
 	      expect(@movie.producer).to eq("New Producer")
 	    end
 	end
-
-	describe "Methods" do
-    it "should be able to change language" do
-      @movie.change_language
-      expect(@movie.language).to eq("Korean")
-    end
-  end
 end

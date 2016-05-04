@@ -41,14 +41,12 @@ describe DigitalItem do
 
 	describe "Methods" do
      it "should not be able to stock more or less than 1" do
-        result = @item.stock 5
-        expect(result).to eq(false)
-        expect(@item.quantity).to eq(1)
+        @digitalitem.stock 5
+        expect(@digitalitem.quantity).to eq(1)
       end
      it "should be able to sell items and keep quantity the same" do
-     		result = @item.sell 2
-	     expect(result).to eq(true)
-	     expect(@item.quantity).to eq(1)
+     		@digitalitem.sell 2
+	     expect(@digitalitem.quantity).to eq(1)
     end
   end
 end
