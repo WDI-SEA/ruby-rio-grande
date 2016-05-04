@@ -11,7 +11,9 @@ describe Bluray do
     it "is a kind of the Item class" do
       expect(@br1).to be_a_kind_of(Item)
     end
-    it "is an instance of the Bluray class"
+    it "is an instance of the Bluray class" do
+    	expect(@br1).to be_an_instance_of(Bluray)
+    end
     it "is assigned a name" do
       expect(@br1.name).to eq("Fifth Element")
     end

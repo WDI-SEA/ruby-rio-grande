@@ -11,20 +11,26 @@ describe Movie do
     it "is a kind of the Item class" do
       expect(@movie1).to be_a_kind_of(Item)
     end
-
     it "is a kind of the DigitalItem class" do
-      expect(@movie1).to be_a_kind_of(DigitalItem)
+      expect(@movie1).to be_a_kind_of(Digital_item)
     end
-
     it "is an instance of the Movie class" do
     	expect(@movie1).to be_instance_of(Movie)
     end
-
     it "is assigned a name" do
-      expect(@movie1.name).to eq("Starter Pack")
+      expect(@movie1.name).to eq("The Incredibles")
     end
     it "is assigned a price" do
-      expect(@movie1.price).to eq(0.99)
+      expect(@movie1.price).to eq(19.99)
+    end
+    it "is assigned a runtime" do
+      expect(@movie1.runtime).to eq(105)
+    end
+    it "is assigned a director" do
+      expect(@movie1.runtime).to eq("Brad Bird")
+    end
+    it "is assigned a producer" do
+      expect(@movie1.producer).to eq("Pixar")
     end
   end
 

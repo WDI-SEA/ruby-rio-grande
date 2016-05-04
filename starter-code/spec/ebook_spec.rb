@@ -11,15 +11,12 @@ describe Ebook do
     it "is a kind of the Item class" do
       expect(@ebook1).to be_a_kind_of(Item)
     end
-
     it "is a kind of the Digital_item class" do
       expect(@ebook1).to be_a_kind_of(Digital_item)
     end
-
     it "is an instance of the Ebook class" do
     	expect(@ebook1).to be_instance_of(Ebook)
     end
-
     it "is assigned a name" do
       expect(@ebook1.name).to eq("The Life-Changing Magic of Not Giving a F**k")
     end
