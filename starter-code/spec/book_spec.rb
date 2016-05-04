@@ -5,6 +5,7 @@ describe Book do
 
   before(:context) do
     #initialize item
+    def initialize
   end
 
   #check initialization
