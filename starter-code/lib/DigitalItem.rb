@@ -9,6 +9,7 @@ class Digitalitem < Item
     super(name,price)
     @quantity = 1
     @description = description
+
   end
 
   def sell amount

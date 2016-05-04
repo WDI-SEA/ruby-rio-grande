@@ -7,6 +7,7 @@ class Item
     @price = price
     @quantity = 0
     @description = ""
+
   end
 
   def sell amount
