@@ -57,7 +57,7 @@ describe Digital_item do
     it "should be able to sell items and quantity should stay as 1" do
       result = @digital_item1.sell 3
       expect(result).to eq(true)
-      expect(@digital_item1.quantity).to eq(2)
+      expect(@digital_item1.quantity).to eq(1)
     end
   end
 
@@ -68,7 +68,7 @@ describe Digital_item do
       expect(@digital_item1.quantity).to eq(1)
     end
     it "should have a default weight of -1 for digital items" do
-      expect(@digital_item1.weight).to eq(0)
+      expect(@digital_item1.weight).to eq(-1)
     end
     it "should not be able to set a new weight" do
       @digital_item1.weight = 1

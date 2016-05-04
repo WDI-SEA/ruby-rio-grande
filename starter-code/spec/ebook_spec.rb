@@ -64,7 +64,7 @@ describe Ebook do
     it "should be able to sell items and quantity should stay as 1" do
       result = @ebook1.sell 3
       expect(result).to eq(true)
-      expect(@ebook1.quantity).to eq(2)
+      expect(@ebook1.quantity).to eq(1)
     end
   end
 
@@ -75,7 +75,7 @@ describe Ebook do
       expect(@ebook1.quantity).to eq(1)
     end
     it "should have a default weight of -1 for digital items" do
-      expect(@ebook1.weight).to eq(0)
+      expect(@ebook1.weight).to eq(-1)
     end
     it "should not be able to set a new weight" do
       @ebook1.weight = 1
