@@ -1,7 +1,7 @@
 require_relative 'spec_helper'
 require_relative '../lib/DigitalItem'
 
-describe DigitalItem do
+describe Digital_item do
 	
 	before(:context) do
 		@digital_item1 = Digital_item.new("Starter Pack", 0.99)
