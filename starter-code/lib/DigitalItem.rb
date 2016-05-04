@@ -3,12 +3,13 @@ require_relative 'Item.rb'
 class Digitalitem < Item
 
 
-  attr_accessor :quantity, :description
+  attr_accessor :quantity, :description, :weight
 
   def initialize quantity,description
     super(name,price)
     @quantity = 1
     @description = description
+    @weight = 0
 
   end
 
