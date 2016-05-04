@@ -18,18 +18,46 @@ describe Book do
     it "extends from the Item class" do
       expect(Book).to be < Item
     end
-    #check getters and setters
-    it "is assigned a name" do
-      expect(@book.name).to eq("Book Title")
+    
+  end
+
+  #check getters and setters
+  describe "Accessors" do
+    it "should be able to get and set name" do
+      @book.name = "New Title"
+      expect(@book.name).to eq("New Title")
     end
-    it "is assigned a price" do
-      expect(@book.price).to eq(12.99)
+    it "should be able to get and set price" do
+      # test setter
+      @book.price = 10.00
+      # test getter
+      expect(@book.price).to eq(10.00)
     end
-    it "is assigned pages" do
-      expect(@book.pages).to eq(33)
+    it "should be able to get and set pages" do
+      @book.pages = 34
+      expect(@book.pages).to eq(34)
     end
-    it "is assigned an author" do
-      expect(@book.author).to eq("Author Name")
+    it "should be able to get and set author" do
+      @book.author = "New Author"
+      expect(@book.author).to eq("New Author")
+    end
+  end
+
+  describe "Methods" do
+    it "should be able to stock" do
+      result = @book.stock 5
+      expect(result).to eq(true)
+      expect(@book.quantity).to eq(5)
+    end
+    it "should not be able to sell more items than we have" do
+      result = @book.sell 6
+      expect(result).to eq(false)
+      expect(@book.quantity).to eq(5)
+    end
+    it "should be able to sell items and update quantity" do
+      result = @book.sell 3
+      expect(result).to eq(true)
+      expect(@book.quantity).to eq(2)
     end
   end
 
