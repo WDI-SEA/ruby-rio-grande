@@ -54,6 +54,11 @@ describe Item do
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
     end
+    it "should be able to return items and update quantity" do
+      result = @item.return 10
+      expect(result).to eq(true)
+      expect(@item.quantity).to eq(12)
+    end
   end
 
 end
