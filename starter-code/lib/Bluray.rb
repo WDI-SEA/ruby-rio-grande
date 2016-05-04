@@ -8,4 +8,5 @@ class Bluray < Item
   		@run_time = run_time
   		@director = director
   		@producer = producer
+  	end
 end
