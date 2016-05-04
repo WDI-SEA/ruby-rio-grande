@@ -8,17 +8,17 @@ describe Cd do
   end
 
   describe "Initialization" do
-    it "is an instance of the Item class" do
-      expect(@cd1).to be_instance_of(Item)
+    it "is a kind of the Item class" do
+      expect(@cd1).to be_a_kind_of(Item)
     end
     it "is an instance of the Cd class" do
     	expect(@cd1).to be_instance_of(Cd)
     end
     it "is assigned a name" do
-      expect(@cd1.name).to eq("Generic Item")
+      expect(@cd1.name).to eq("Make it Big")
     end
     it "is assigned a price" do
-      expect(@cd1.price).to eq(1.99)
+      expect(@cd1.price).to eq(19)
     end
     it "is assigned a number of tracks" do
     	expect(@cd1.tracks).to eq(8)

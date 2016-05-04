@@ -8,7 +8,7 @@ describe Book do
   end
 
   describe "Initialization" do
-    it "is an instance of the Item class" do
+    it "is a kind of the Item class" do
       expect(@book1).to be_a_kind_of(Item)
     end
 
