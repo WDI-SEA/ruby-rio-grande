@@ -28,9 +28,7 @@ describe Book do
       expect(@book.name).to eq("New Title")
     end
     it "should be able to get and set price" do
-      # test setter
       @book.price = 10.00
-      # test getter
       expect(@book.price).to eq(10.00)
     end
     it "should be able to get and set pages" do
