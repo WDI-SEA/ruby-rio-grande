@@ -49,4 +49,17 @@ describe Bluray do
       expect(@bluray.producer).to eq("test")
     end
   end
+
+  describe "Methods" do
+    it "should be able to return items and update quantity" do
+      result = @item.return 5
+      expect(result).to eq(true)
+      expect(@item.quantity).to eq(7)
+    end
+    it "should be able to get and set weight" do
+      expect(@item.weight).to eq(0)
+      @item.weight = 2
+      expect(@item.weight).to eq(2)
+    end
+  end
 end

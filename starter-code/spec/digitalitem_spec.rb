@@ -22,6 +22,7 @@ describe DigitalItem do
   describe "Inheritance" do
     it "should extend Item" do
       expect(DigitalItem).to be < Item
+    end
   end
 
   describe "Accessors" do
@@ -35,7 +36,13 @@ describe DigitalItem do
     end
     it "should be able to get quantity" do
       expect(@digital_item.quantity).to eq(1)
-      @digital_item.quantity = 3
+    end    
+
+  end
+
+  describe "Methods" do
+    it "should be able to get weight" do
+      expect(@digital_item.weight).to eq(-1)
     end
   end
 end

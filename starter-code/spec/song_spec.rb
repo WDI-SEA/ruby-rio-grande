@@ -45,9 +45,9 @@ describe Song do
     end
   end
 
-
-  #check that it is an extended from Item
-  #check that it is an instance of Cd
-  #check getters and setters
-
+  describe "Methods" do
+    it "should be able to get weight" do
+      expect(@digital_item.weight).to eq(-1)
+    end
+  end
 end

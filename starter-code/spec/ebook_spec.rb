@@ -47,4 +47,10 @@ describe EBook do
       expect(@ebook.quantity).to eq(1)
     end
   end
+
+  describe "Methods" do
+    it "should be able to get weight" do
+      expect(@digital_item.weight).to eq(-1)
+    end
+  end
 end
