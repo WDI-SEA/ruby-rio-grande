@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require_relative '../lib/Item'
+# require_relative '../lib/Item'
 require_relative '../lib/Book'
 
 describe Book do
