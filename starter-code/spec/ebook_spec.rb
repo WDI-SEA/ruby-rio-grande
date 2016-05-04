@@ -1,5 +1,5 @@
 # You are on your own... good luck.
-equire_relative 'spec_helper'
+require_relative 'spec_helper'
 require_relative '../lib/DigitalItem'
 require_relative '../lib/EBook'
 
