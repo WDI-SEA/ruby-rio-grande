@@ -43,6 +43,9 @@ describe Item do
       @item.description="test"
       expect(@item.description).to eq("test")
     end
+    it "should be able to get ship price per oz" do
+      expect(@item.ship_price_per_oz).to eq(1.2)
+    end
   end
 
   describe "Methods" do
@@ -65,6 +68,9 @@ describe Item do
       result = @item.return 10
       expect(result).to eq(true)
       expect(@item.quantity).to eq(12)
+    end
+    it "should be able to calculate ship price" do
+      expect(@item.ship_price).to eq(60)
     end
   end
 
