@@ -22,6 +22,12 @@ describe Bluray do
     it "should have an run time of 80 mins" do
       expect(@bluray.run_time).to eq("80 mins")
     end
+    it "should have a director of RZA" do
+      expect(@bluray.director).to eq("RZA")
+    end
+    it "should have a producer of RZA" do
+      expect(@bluray.producer).to eq("RZA")
+    end
   end
 
 end
