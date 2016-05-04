@@ -1,12 +1,13 @@
 class Item
   attr_reader :quantity
-  attr_accessor :name, :price, :description
+  attr_accessor :name, :price, :weight, :description
 
-  def initialize name, price
+  def initialize name, price, weight
     @name = name
     @price = price
     @quantity = 0
     @description = ""
+    @weight = weight || @weight = 0
   end
 
   def sell amount
