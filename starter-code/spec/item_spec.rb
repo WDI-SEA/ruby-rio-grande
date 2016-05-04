@@ -56,4 +56,21 @@ describe Item do
     end
   end
 
+  describe "Part 2 Methods" do
+    it "should be able to return" do
+      result = @item.return 2
+      expect(result).to eq(true)
+      expect(@item.quantity).to eq(4)
+    end
+    it "should have a default weight of 0" do
+      expect(@item.weight).to eq(0)
+    end
+    it "should be able to set a new weight" do
+      @item.weight = 1
+      expect(@item.weight).to eq(1)
+    end
+    it "should be able to report a ship_price" do
+      expect(@item.ship_price).to eq(1.2)
+    end
+  end
 end
