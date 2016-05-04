@@ -29,6 +29,9 @@ describe DigitalItem do
   		it "is assigned a file size (GB)" do
       expect(@digitalitem.filesize).to eq(1.5)
     end
+    it "is assigned a weight of -1" do
+      expect(@digitalitem.weight).to eq(-1)
+    end
 	end
 
 	describe "Accessors" do
@@ -47,6 +50,9 @@ describe DigitalItem do
      it "should be able to sell items and keep quantity the same" do
      		@digitalitem.sell 2
 	     expect(@digitalitem.quantity).to eq(1)
+    end
+    it "should not be able to calculate ship price" do
+      expect(@digitalitem.ship_price).to eq(nil)
     end
   end
 end

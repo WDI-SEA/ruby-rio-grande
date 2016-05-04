@@ -73,5 +73,4 @@ describe Item do
       expect(@item.ship_price).to eq(60)
     end
   end
-
 end
