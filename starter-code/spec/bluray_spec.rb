@@ -56,9 +56,9 @@ describe Bluray do
 	end
 
 	describe "Methods" do
-    it "should be able to change language" do
-      @bluray.change_language
-      expect(@bluray.language).to eq("Korean")
-    end
+      it "should be able to change language" do
+        @bluray.change_language
+        expect(@bluray.language).to eq("Korean")
+      end
   end
 end
