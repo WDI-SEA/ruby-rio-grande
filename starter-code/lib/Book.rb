@@ -1,7 +1,4 @@
-
 require_relative './Item.rb'
-
-
 
 class Book < Item
   attr_accessor :pages, :author
@@ -11,6 +8,4 @@ class Book < Item
     @author = author
     @pages = pages
   end
-
-
 end
