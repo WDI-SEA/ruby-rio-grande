@@ -57,7 +57,7 @@ describe DigitalItem do
       expect(@digital_item.quantity).to eq(1)
     end
     it "should calculate ship_price as false" do
-      price = @item.ship_price
+      price = @digital_item.ship_price
       expect(price).to eq(false)
     end
   end

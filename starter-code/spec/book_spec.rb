@@ -5,7 +5,7 @@ require_relative '../lib/Book'
 describe Book do
 
   before(:context) do
-    @book = Book.new "Book Title", 12.99, 33, "Author Name"
+    @book = Book.new "Book Title", 12.99, 64, 33, "Author Name"
   end
 
   #check initialization

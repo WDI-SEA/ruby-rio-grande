@@ -5,7 +5,7 @@ describe Cd do
 
   before(:context) do
     #initialize item
-    @cd = Cd.new "CD title", 10.99, 12, "Beiber", "1 Hour"
+    @cd = Cd.new "CD title", 10.99, 64, 12, "Beiber", "1 Hour"
   end
 
   #check initialization

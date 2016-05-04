@@ -4,7 +4,7 @@ class DigitalItem < Item
   attr_accessor :name, :price
 
   def initialize name, price
-  	super(name,price)
+  	super(name, price, -1)
   	@quantity = 1
   end
 

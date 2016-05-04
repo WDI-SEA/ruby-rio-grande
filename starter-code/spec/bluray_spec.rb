@@ -5,7 +5,7 @@ require_relative '../lib/Bluray'
 describe Bluray do
 
   before(:context) do
-    @bluray = Bluray.new "Bluray Title", 12.99, "2 hours", "Director Name", "Producer Name"
+    @bluray = Bluray.new "Bluray Title", 12.99, 64, "2 hours", "Director Name", "Producer Name"
   end
 
   #check initialization
