@@ -1,25 +1,18 @@
-class DigitalItem
-  # attr_reader :quantity
-  # attr_accessor :name, :price, :description
+require_relative 'Item.rb'
 
-  # def initialize name, price
-  #   @name = name
-  #   @price = price
-  #   @quantity = 0
-  #   @description = ""
-  # end
+class DigitalItem < Item
+  attr_accessor :name, :price
 
-  # def sell amount
-  #   if @quantity >= amount
-  #     @quantity -= amount
-  #     true
-  #   else
-  #     false
-  #   end
-  # end
+  def initialize name, price
+  	super(name,price)
+  	@quantity = 1
+  end
 
-  # def stock amount
-  #   @quantity += amount
-  #   true
-  # end
+  def sell amount
+    true
+  end
+
+  def stock amount
+    true
+  end
 end
