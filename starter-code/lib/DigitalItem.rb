@@ -4,15 +4,13 @@ require 'pry'
 class DigitalItem < Item
 
 attr_reader :quantity, :weight
-  @quantity = 1
-  @weight = 0
-
+ 
   
 
   def initialize name, price
+    super(name,price)
     @quantity = 1
     @weight = -1
-    super(name,price)
 
   end
 

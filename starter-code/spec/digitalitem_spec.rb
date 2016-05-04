@@ -29,10 +29,10 @@ describe DigitalItem do
   #check getters and setters
   describe "Quantiy and weight" do
     it "defaults to a quantity of 1" do
-      expect(@di.quantity).to eq(1)
+      expect(@item.quantity).to eq(1)
     end
     it "defaults to a weight of -1" do
-      expect(@di.weight).to eq(-1)
+      expect(@item.weight).to eq(-1)
     end
   end
 

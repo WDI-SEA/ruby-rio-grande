@@ -2,7 +2,7 @@ class Item
   attr_reader :quantity
   attr_accessor :name, :price, :description, :weight
 
-  def initialize name, price, weight= 0
+  def initialize name, price, weight=0
     @name = name
     @price = price
     @quantity = 0
