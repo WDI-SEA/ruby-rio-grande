@@ -5,7 +5,7 @@ class Bluray < Item
 	attr_accessor :producer
 
 	def initialize name, price, runtime, director, producer
-    super(name,price)
+    super(name,price, weight)
     @runtime = runtime
     @director = director
     @producer = producer

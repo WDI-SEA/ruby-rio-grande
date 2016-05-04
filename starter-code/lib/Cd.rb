@@ -5,7 +5,7 @@ class Cd < Item
 	attr_accessor :runtime
 
 	def initialize name, price, tracks, artist, runtime
-    super(name,price)
+    super(name,price, weight)
     @tracks = tracks
     @artist = artist
     @runtime = runtime
