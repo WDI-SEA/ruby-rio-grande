@@ -31,7 +31,11 @@ class Item
   end
 
   def ship_price
-    @ship_price_per_oz * @weight
+    if weight == -1
+      return false
+    else
+      @ship_price_per_oz * @weight
+    end
   end
 
 end
