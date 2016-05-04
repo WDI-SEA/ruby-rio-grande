@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require_relative '../lib/DigitalItem'
+require_relative '../lib/Ebook'
 
 describe Ebook do
 	
@@ -25,6 +25,12 @@ describe Ebook do
     end
     it "is assigned a price" do
       expect(@ebook1.price).to eq(11.99)
+    end
+    it "is assigned a number of pages" do
+    	expect(@ebook1.pages).to eq(125)
+    end
+    it "is assigned an author" do
+    	expect(@ebook1.author).to eq("Sarah Knight")
     end
   end
 

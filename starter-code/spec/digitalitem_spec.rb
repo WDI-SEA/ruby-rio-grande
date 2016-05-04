@@ -12,8 +12,8 @@ describe Digital_item do
       expect(@digital_item1).to be_a_kind_of(Item)
     end
 
-    it "is an instance of the DigitalItem class" do
-    	expect(@digital_item1).to be_instance_of(DigitalItem)
+    it "is an instance of the Digital_item class" do
+    	expect(@digital_item1).to be_instance_of(Digital_item)
     end
 
     it "is assigned a name" do
