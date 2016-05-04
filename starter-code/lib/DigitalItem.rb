@@ -8,7 +8,7 @@ def initialize name, price, filesize
     super(name,price, weight)
     @filesize = filesize
     @quantity = 1
-    # @weight = -1
+    @weight = -1
     @ship_price = nil
 	end
 
@@ -21,6 +21,6 @@ def initialize name, price, filesize
   	@ship_price
   end
   def weight
-    -1
+    @weight = -1
   end
 end
