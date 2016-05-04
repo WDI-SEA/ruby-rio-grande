@@ -3,7 +3,7 @@ require_relative 'Item.rb'
 class Digital_item < Item
 
 
-  attr_accessor :quantity, :description 
+  attr_accessor :quantity, :description
 
   def initialize name, price
     super(name,price)
@@ -24,10 +24,17 @@ class Digital_item < Item
     true
   end
 
-  def return
+  def return amount
     @quantity = 1
     "item returned"
     true
   end
+  def weight
+    @weight = -1
+    return -1
+    
+  end
+
+
 end
 
