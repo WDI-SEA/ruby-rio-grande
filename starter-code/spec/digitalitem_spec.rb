@@ -48,6 +48,11 @@ describe DigitalItem do
       expect(result).to eq(true)
       expect(@digital_item.quantity).to eq(1)
     end
+    it "should not increase quanity when returned" do
+      result = @digital_item.return(10)
+      expect(result).to eq(true)
+      expect(@digital_item.quantity).to eq(1)
+    end
   end
 
 end
