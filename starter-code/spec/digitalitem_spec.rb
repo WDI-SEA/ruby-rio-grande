@@ -35,6 +35,10 @@ describe DigitalItem  do
       @digitalitem.description="test"
       expect(@digitalitem.description).to eq("test")
     end
+     it "should maintain 0 weight" do
+      @item.weight=10
+      expect(@item.weight).to eq(0)
+    end
   end
   
   describe "Methods" do
