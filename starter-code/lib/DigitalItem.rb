@@ -15,4 +15,8 @@ class DigitalItem < Item
   def stock amount
     true
   end
+
+  def return amount
+    true
+  end
 end
