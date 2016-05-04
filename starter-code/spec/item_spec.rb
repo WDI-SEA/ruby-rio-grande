@@ -54,6 +54,9 @@ describe Item do
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
     end
+    it "should be able to get quantity" do
+      expect(@song.quantity).to eq(1)
+    end
   end
 
 end
