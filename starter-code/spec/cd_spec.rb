@@ -19,6 +19,11 @@ describe Cd do
     end
   end
 
+  describe "Inheritance" do
+    it "should extend Item" do
+      expect(cd).to be < Item
+  end
+
   describe "Accessors" do
     it "should be able to get and set name" do
       @cd.name="New Name"

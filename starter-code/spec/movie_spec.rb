@@ -19,6 +19,11 @@ describe Movie do
     end
   end
 
+  describe "Inheritance" do
+    it "should extend DigitalItem" do
+      expect(Movie).to be < DigitalItem
+  end
+
   describe "Accessors" do
     it "should be able to get quantity" do
       expect(@movie.quantity).to eq(1)

@@ -19,6 +19,11 @@ describe DigitalItem do
     end
   end
 
+  describe "Inheritance" do
+    it "should extend Item" do
+      expect(DigitalItem).to be < Item
+  end
+
   describe "Accessors" do
     it "should be able to get and set name" do
       @digital_item.name="New Name"

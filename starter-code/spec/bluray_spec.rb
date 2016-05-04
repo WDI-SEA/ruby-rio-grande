@@ -19,6 +19,11 @@ describe Bluray do
     end
   end
 
+  describe "Inheritance" do
+    it "should extend Item" do
+      expect(bluray).to be < Item
+  end
+
 
   describe "Accessors" do
     it "should be able to get and set name" do
