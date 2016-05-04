@@ -11,8 +11,11 @@ describe Bluray do
   #check initialization
 
   describe "Initialization" do
-    it "Bluray to be inherited from Item" do
+    it "is an extended class of the Item class" do
       expect(Bluray).to be < Item 
+    end
+    it "is an instance of the Bluray class" do
+      expect(@bluray).to be_instance_of(Bluray)
     end
      it "is assigned a name" do
       expect(@bluray.name).to eq("The Wolf of Wall Street")
