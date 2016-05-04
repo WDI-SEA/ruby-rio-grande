@@ -50,15 +50,9 @@ describe Cd do
 	end
 
 	describe "Methods" do
-     it "should not be able to stock more or less than 1" do
-        result = @item.stock 5
-        expect(result).to eq(false)
-        expect(@item.quantity).to eq(1)
-      end
-     it "should be able to sell items and keep quantity the same" do
-     		result = @item.sell 2
-	     expect(result).to eq(true)
-	     expect(@item.quantity).to eq(1)
+    it "should be able to shorten the runtime" do
+      @cd.cut_runtime 10
+      expect(@cd.runtime).to eq(30)
     end
   end
 end
