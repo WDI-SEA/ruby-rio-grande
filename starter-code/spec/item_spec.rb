@@ -54,6 +54,11 @@ describe Item do
       expect(result).to eq(true)
       expect(@item.quantity).to eq(2)
     end
+    it "should be able to return and add to quantity" do
+      result = @item.return 3
+      expect(result).to eq(true)
+      expect(@item.quantity).to eq(5)
+    end
   end
 
 end
