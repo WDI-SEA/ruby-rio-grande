@@ -15,7 +15,7 @@ describe EBook do
       expect(@ebook).to be_instance_of(EBook)
     end
     it "should have an Author of Stephen King" do
-      expect(@egbook.author).to eq("Stephen King")
+      expect(@ebook.author).to eq("Stephen King")
     end
   end
 
