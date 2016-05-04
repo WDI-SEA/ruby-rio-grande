@@ -27,7 +27,7 @@ describe Movie do
       expect(@movie1.runtime).to eq(105)
     end
     it "is assigned a director" do
-      expect(@movie1.runtime).to eq("Brad Bird")
+      expect(@movie1.director).to eq("Brad Bird")
     end
     it "is assigned a producer" do
       expect(@movie1.producer).to eq("Pixar")

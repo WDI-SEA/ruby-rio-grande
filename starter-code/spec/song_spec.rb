@@ -18,10 +18,16 @@ describe Song do
     	expect(@song1).to be_an_instance_of(Song)
     end
     it "is assigned a name" do
-      expect(@song1.name).to eq("Starter Pack")
+      expect(@song1.name).to eq("Let's Get It On")
     end
     it "is assigned a price" do
-      expect(@song1.price).to eq(0.99)
+      expect(@song1.price).to eq(1.29)
+    end
+    it "is assigned a runtime" do
+      expect(@song1.runtime).to eq("4:51")
+    end
+    it "is assigned an artist" do
+      expect(@song1.artist).to eq("Marvin Gaye")
     end
   end
 

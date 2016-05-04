@@ -36,7 +36,7 @@ describe Ebook do
       expect(@ebook1.quantity).to eq(1)
     end
     it "should be able to get and set name" do
-      @digital_item1.name="New Name"
+      @ebook1.name="New Name"
       expect(@ebook1.name).to eq("New Name")
     end
     it "should be able to get and set price" do
