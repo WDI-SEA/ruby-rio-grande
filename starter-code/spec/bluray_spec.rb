@@ -16,4 +16,8 @@ describe Bluray do
   #check that it is an instance of Bluray
   #check getters and setters
 
+  describe Accessors do
+  	it ""
+  end
+
 end
