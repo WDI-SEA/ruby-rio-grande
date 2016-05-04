@@ -2,7 +2,7 @@ require_relative 'DigitalItem.rb'
 
 class Song < DigitalItem
 
-  def initialize (name, price, tracks, artist, run_time, weight,)
+  def initialize (name, price, tracks, artist, run_time)
     super(name,price)
     @tracks = tracks
     @artist = artist

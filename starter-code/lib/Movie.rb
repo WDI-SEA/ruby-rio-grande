@@ -2,7 +2,7 @@ require_relative 'DigitalItem.rb'
 
 class Movie < DigitalItem
 
-  def initialize (name, price, run_time, director, producer, ship_price)
+  def initialize (name, price, run_time, director, producer)
     super(name,price)
     @run_time = run_time
     @director = director

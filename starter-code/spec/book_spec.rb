@@ -12,7 +12,7 @@ describe "initialization" do
   it "is an instance of the Book class"do
   expect(@hundred_years).to be_instance_of(Book)
   expect(@hundred_years.name).to eq("100 Years of Solitude")
-  # expect(@hundred_years).to be_instance_of(Item)
+  expect(@hundred_years).to be < Item
   end
 end
 

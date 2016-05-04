@@ -8,22 +8,26 @@ describe DigitalItem do
   before(:context) do
     #initialize item
     # (name, price, weight)
-    @hundred_years = Book.new("100 Years of Solitude", 12.99, 345, "Marquez", 33, 0)
+      @digital_item = DigitalItem.new "DigItem title", 9.99
   end
+
 describe "initialization" do
-  it "is an instance of the Book class"do
-  expect(@hundred_years).to be_instance_of(Book)
-  expect(@hundred_years.name).to eq("100 Years of Solitude")
-  # expect(@hundred_years).to be_instance_of(Item)
+    it "extend from the Item class" do
+      expect(DigitalItem).to be < Item
+    end
+    it "is an instance of the DigitalItem class" do
+      expect(@digital_item).to be_instance_of(DigitalItem)
+    end
   end
-end
 
 it "getters" do
-  expect(@hundred_years.author).to eq("Marquez")
+  expect(@digital_item.name).to eq("DigItem title")
+
+
 end
 it "setters" do
-  @hundred_years.author = "foo"
-  expect(@hundred_years.author).to eq("foo")
+  @digital_item.price = 12
+  expect(@digital_item.price).to eq(12)
   end
 
 
