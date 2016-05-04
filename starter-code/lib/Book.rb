@@ -5,7 +5,7 @@ class Book < Item
     super(name,price)
   end
 
-  def properties
+  def properties(pages, author)
   	@pages = num
   	@author = author
   end
