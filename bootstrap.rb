@@ -1,14 +1,14 @@
-#Require all classes
+# Require all classes
 require 'pry'
 
-require './lib/Item'
-require './lib/Bluray'
-require './lib/Book'
-require './lib/Cd'
-require './lib/DigitalItem'
-require './lib/EBook'
-require './lib/Movie'
-require './lib/Song'
+require './src/Item'
+require './src/Bluray'
+require './src/Book'
+require './src/Cd'
+require './src/DigitalItem'
+require './src/EBook'
+require './src/Movie'
+require './src/Song'
 
 pry.binding
 
@@ -39,4 +39,4 @@ pry.binding
 # # i.quantity
 # output: 0
 
-#......... etc
+# ......... etc
