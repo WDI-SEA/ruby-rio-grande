@@ -21,7 +21,6 @@ describe DigitalItem do
     it 'is assigned a price' do
       expect(@digital_item.price).to eq(15.00)
     end
-
     it 'should be able to get quantity' do
       expect(@digital_item.quantity).to eq(1)
     end
