@@ -10,7 +10,6 @@ describe Bluray do
   # check initialization
   # check that it is an extended from Item
   # check that it is an instance of Bluray
-  # check getters and setters
   describe 'Initialization' do
     it 'is an instance of Bluray' do
       expect(@bluray).to be_instance_of(Bluray)
