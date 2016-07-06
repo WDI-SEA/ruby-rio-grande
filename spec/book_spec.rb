@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require_relative '../src/book'
+require_relative '../lib/book'
 
 describe Book do
   before(:context) do
