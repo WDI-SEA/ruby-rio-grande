@@ -21,9 +21,6 @@ describe Bluray do
     it 'is assigned a price' do
       expect(@bluray.price).to eq(15.00)
     end
-  end
-
-  describe 'Accessors' do
     it 'should be able to get runtime' do
       expect(@bluray.run_time).to eq(120)
     end

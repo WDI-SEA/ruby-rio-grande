@@ -23,7 +23,7 @@ describe Cd do
     end
     it 'is assigned a tracks' do
       expect(@cd.tracks).to eq(20)
-  end
+    end
     it 'should be able to get tracks' do
       expect(@cd.price).to eq(10)
     end
@@ -31,6 +31,6 @@ describe Cd do
       expect(@cd.run_time).to eq(60)
     end
 
-    end
-
   end
+
+end
