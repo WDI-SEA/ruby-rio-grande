@@ -1,5 +1,5 @@
-require_relative 'spec_helper'
-require_relative '../src/item'
+require 'spec_helper'
+require './lib/item'
 
 describe Item do
   before(:context) do
