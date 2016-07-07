@@ -8,5 +8,5 @@ class Bluray < Item
     @director = director
     @producer = producer
   end
-
 end
+

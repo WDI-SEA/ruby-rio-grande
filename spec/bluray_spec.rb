@@ -61,5 +61,33 @@ describe 'getters and setters' do
       expect(@bluray.producer).to eq('Sawyer')
     end
   end
+
+# checking Methods - Stock
+  describe 'Methods - Stock' do
+    # check running stock function, stocking 100 blurays
+    before(:example) do
+      @blu1.stock(100)
+    end
+
+    # checking 'stock' method inherited from Item
+    it 'should stock 100 blurays' do
+      expect(@blu1.get_stock).to eq(100)
+    end
+  end
+
+  # checking Methods - Sell
+  describe 'Methods - Sell' do
+    # checking 'sell' method inherited from Item
+    before(:example) do
+      # selling 42 blurays
+      @blu1.sell(42)
+    end
+
+    # checking to see if sell() worked properly
+    it 'should sell 42 blurays, leaving stock of 58' do
+      expect(@blu1.get_stock).to eq(58)
+    end
+  end
+
 end
 
