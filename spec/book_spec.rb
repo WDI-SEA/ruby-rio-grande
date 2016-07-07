@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require_relative '../src/book'
+require './lib/book'
 
 describe Book do
   before(:context) do
@@ -54,6 +54,24 @@ describe Book do
     it 'assigns and reads the author' do
       @book.author = 'John Milton'
       expect(@book.author).to eq('John Milton')
+    end
+  end
+
+  describe 'Methods' do
+    it 'Should be able to add stock' do
+      result = @book.stock 14
+      expect(result).to eq(true)
+      expect(@book.quantity).to eq(14)
+    end
+    it 'Should not be able to sell more items than in stock' do
+      result = @book.sell 15
+      expect(result).to eq(false)
+      expect(@book.quantity).to eq(14)
+    end
+    it 'Should be able to sell items and update quantity' do
+      result = @book.sell 13
+      expect(result).to eq(true)
+      expect(@book.quantity).to eq(1)
     end
   end
 end
