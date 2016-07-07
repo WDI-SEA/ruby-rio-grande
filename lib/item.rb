@@ -9,17 +9,21 @@ class Item
     @description = ''
   end
 
-  def sell(amount)
-    if @quantity >= amount
-      @quantity -= amount
+  def sell(amt)
+    if @quantity >= amt
+      @quantity -= amt
       true
     else
       false
     end
   end
 
-  def stock(amount)
-    @quantity += amount
+  def stock(amt)
+    @quantity += amt
     true
+  end
+
+  def get_stock()
+    return @quantity
   end
 end
