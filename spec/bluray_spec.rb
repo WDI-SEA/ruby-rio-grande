@@ -41,8 +41,8 @@ describe Bluray do
   # check getters and setters
   describe 'getters and setters' do
     it 'assigns and reads the name' do
-      @cd.name = 'Mad Max: Fury Road'
-      expect(@cd.name).to eq('Mad Max: Fury Road')
+      @bluray.name = 'Mad Max: Fury Road'
+      expect(@bluray.name).to eq('Mad Max: Fury Road')
     end
 
     it 'assigns and reads the price' do
@@ -71,9 +71,9 @@ describe Bluray do
       expect(@bluray.quantity).to eq(5)
     end
     it 'should not be able to sell more items than are in stock' do
-      result = @bluray.sell 7
+      result = @bluray.sell 6
       expect(result).to eq(false)
-      expect(@bluray.quantity).to eq(6)
+      expect(@bluray.quantity).to eq(5)
     end
     it 'should be able to sell items and update quantity' do
       result = @bluray.sell 3
