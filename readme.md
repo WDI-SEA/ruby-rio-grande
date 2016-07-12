@@ -92,3 +92,9 @@ Oh no the future is here!! Now we need to support digital items. Digital items a
   * Quantity should always be 1
   * Quantity does not decrease when sold
   * Quantity should not increase on stock
+
+---
+
+## Licensing
+1. All content is licensed under a CC-BY-NC-SA 4.0 license.
+2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
