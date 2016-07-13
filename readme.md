@@ -1,5 +1,4 @@
 #Rio Grande
-
 Rio Grande is an online retailer founded by Jerome Basile and named after his favorite river. It started out selling books, but now they sells all sorts of things. They need your OOP / TDD skills to help them create classes for all the different types of items in their online store.
 
 ##Getting Started
