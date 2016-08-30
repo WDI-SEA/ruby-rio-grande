@@ -7,26 +7,26 @@ describe Bluray do
   end
 
   describe 'initialization' do
-    it 'is an instance of Bluray class' do
+    it 'should be a Bluray' do
       expect(@bluray).to be_instance_of(Bluray)
     end
-    it 'is extended from Item' do
+    it 'should be an Item' do
       expect(@bluray).to be_kind_of(Item)
     end
-    it 'has a name' do
-      expect(@bluray).to eq('Mad Max: Fury Road')
+    it 'is assigned a name' do
+      expect(@bluray.name).to eq('Best in Show')
     end
-    it 'has a price' do
-      expect(@bluray).to eq(29.99)
+    it 'is assigned a price' do
+      expect(@bluray.price).to eq(29.99)
     end
-    it 'has a runtime' do
-      expect(@bluray).to eq(90)
+    it 'is assigned a runtime' do
+      expect(@bluray.run_time).to eq(90)
     end
-    it 'has a director' do
-      expect(@bluray).to eq('Christopher Guest')
+    it 'is assigned a director' do
+      expect(@bluray.director).to be('Christopher Guest')
     end
-    it 'has a producer' do
-      expect(@bluray).to eq('Karen Murphy')
+    it 'is assigned a producer' do
+      expect(@bluray.producer).to be('Karen Murphy')
     end
   end
 
@@ -37,22 +37,22 @@ describe Bluray do
     end
 
     it 'sets and gets the price' do
-      @bluray.price = 29.00
-      expect(@bluray.price).to eq(29.00)
+      @bluray.price= 28.99
+      expect(@bluray.price).to eq(28.99)
     end
 
     it 'sets and gets the runtime' do
-      @bluray.runtime = 120
-      expect(@bluray.runtime).to eq(120)
+      @bluray.runtime= 120
+      expect(@bluray.run_time).to eq(120)
     end 
 
     it 'sets and gets the director' do
-      @bluray.director = 'George Miller'
+      @bluray.director= 'George Miller'
       expect(@bluray.director).to eq('George Miller')
     end
 
     it 'sets and gets the producer' do
-      @bluray.producer = 'George Miller'
+      @bluray.producer= 'George Miller'
       expect(@bluray.director).to eq('George Miller')
     end
   end
