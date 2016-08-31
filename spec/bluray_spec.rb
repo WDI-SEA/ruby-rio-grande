@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require_relative '../src/bluray'
+require_relative '../lib/bluray'
 
 describe Bluray do
   before(:context) do
