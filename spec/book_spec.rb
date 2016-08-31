@@ -1,10 +1,10 @@
 require_relative 'spec_helper'
-require_relative '../src/book'
+require_relative '../lib/book'
 
 describe Book do
   before(:context) do
-    # initialize item
-    @book = Book.new('Harry Potter', 15.00, 700, 'JK Rowling')
+    # initialize item   #removed 'Harry Potter', 15.00
+    @book = Book.new(700, 'JK Rowling')
   end
 
   # check initialization
