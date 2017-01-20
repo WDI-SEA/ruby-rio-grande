@@ -1,5 +1,5 @@
-require_relative 'spec_helper'
-require_relative '../src/book'
+require 'spec_helper'
+require './lib/book'
 
 describe Book do
   before(:context) do
@@ -35,7 +35,7 @@ describe Book do
   end
 
   # check getters and setters
-  describe 'getters and setters' do
+  describe 'Accessors' do
     it 'assigns and reads the name' do
       @book.name = 'Paradise Lost'
       expect(@book.name).to eq('Paradise Lost')
@@ -56,4 +56,6 @@ describe Book do
       expect(@book.author).to eq('John Milton')
     end
   end
+
+  # -- Write Method tests for Book
 end
