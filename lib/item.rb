@@ -22,4 +22,9 @@ class Item
     @quantity += amount
     true
   end
+
+  def get_stock()
+    return @quantity
+  end
+
 end
