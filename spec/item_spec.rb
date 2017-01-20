@@ -1,7 +1,7 @@
-require_relative 'spec_helper'
-require_relative '../src/item'
+require 'spec_helper.rb'
+require './lib/item.rb'
 
-describe Item do
+describe 'Item' do
   before(:context) do
     @item = Item.new('Generic Item', 1.99)
   end
